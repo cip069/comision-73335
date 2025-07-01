@@ -1,0 +1,135 @@
+@import "../abstracts/mixin";
+@import "../abstracts/variables";
+@import "../abstracts/navbar";
+@import "../abstracts/footer";
+
+.header_galeria {
+  min-height: $header-height;
+  background-image: url("../imagenes/galeria/fondo_header.jpg");
+  background-position: top;
+  background-size: cover;
+  @include flex(flex, center, center);
+  text-align: center;
+
+  h1 {
+    @include h1(36pt, $color-blanco, bold);
+    text-shadow: #000000 5px 0 5px;
+    margin: 0;
+  }
+}
+
+.galeria {
+  width: 80%;
+  margin: 0 auto;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  height: auto;
+  overflow: hidden;
+
+  .galeria_fotos {
+    overflow: hidden;
+    border: 1px solid $color-negro;
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+      @include h2(24pt, $color-negro, bold);
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &.foto1 {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+    }
+    &.foto2 {
+      grid-column: 2 / 4;
+      grid-row: 1 / 2;
+    }
+    &.foto3 {
+      grid-column: 4 / 6;
+      grid-row: 1 / 2;
+    }
+    &.foto4 {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+    }
+    &.foto5 {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+    }
+    &.foto6 {
+      grid-column: 3 / 4;
+      grid-row: 2 / 3;
+    }
+    &.foto7 {
+      grid-column: 4 / 6;
+      grid-row: 2 / 3;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .header_galeria {
+    height: 100vh;
+  }
+
+  .galeria {
+    @include grid(grid, repeat(2, 1fr), auto, 10px);
+    width: 100%;
+    padding-top: 30px;
+    height: auto;
+
+    .galeria_fotos {
+      grid-column: auto !important;
+      grid-row: auto !important;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .foto7 {
+      grid-column: 1 / 3 !important;
+    }
+  }
+}
+
+@media (min-width: 576px) and (max-width: 1024px) {
+  .header_galeria {
+    height: 60vh;
+    @include flex(flex, center, center);
+    text-align: center;
+
+    h1 {
+      margin: 0;
+    }
+  }
+
+  .galeria {
+    @include grid(grid, repeat(2, 1fr), auto, 10px);
+    width: 90%;
+    padding: 20px;
+    height: auto;
+
+    .galeria_fotos {
+      grid-column: auto !important;
+      grid-row: auto !important;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .foto7 {
+      grid-column: 1 / 3 !important;
+    }
+  }
+}

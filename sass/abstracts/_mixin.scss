@@ -1,0 +1,38 @@
+@mixin flex($display, $justify, $align) {
+  display: $display;
+  justify-content: $justify;
+  align-items: $align;
+}
+@mixin grid($display, $template-columns, $template-rows, $gap) {
+  display: $display;
+  grid-template-columns: $template-columns;
+  grid-template-rows: $template-rows;
+  gap: $gap;
+}
+
+//Textos
+@mixin h1($size, $color, $weight) {
+  font-size: $size;
+  color: $color;
+  font-weight: $weight;
+}
+@mixin h2($size, $color, $weight) {
+  font-size: $size;
+  color: $color;
+  font-weight: $weight;
+}
+@mixin p($size, $color, $weight) {
+  font-size: $size;
+  color: $color;
+  font-weight: $weight;
+}
+
+//Boton
+@mixin btn{
+  text-decoration: none;
+  background-color: #eee;
+  color: #000000;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 10px 0px;
+}

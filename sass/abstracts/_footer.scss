@@ -1,0 +1,12 @@
+@import "variables";
+
+footer {
+    padding: 10px;
+    background-color: $color-secundario;
+    @include flex(flex, center, center);
+    p{
+        @include p(16pt, $color-blanco, normal);
+        color: white;
+        margin: 0;
+    }
+}

@@ -1,0 +1,53 @@
+
+  /* ---- PAGINA GALERIA ----- */
+   .galeria {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    width: 100%;
+    padding-top: 30px;
+    gap: 10px;
+    height: auto;
+  }
+
+  .galeria_fotos {
+    grid-column: auto !important; /* ✅ RESETEA */
+    grid-row: auto !important;    /* ✅ RESETEA */
+   
+    display: block;
+  }
+
+  .galeria_fotos img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  } 
+  .foto7{
+    grid-column: 1/3 !important;
+
+  }
+
+  /* ---- PAGINA CONTACTO ----- */
+  .header_contacto {
+    background-position: 82% center;
+  }
+  .contacto {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .formulario {
+    width: 100%;
+    height: auto;
+  }
+  .mapa {
+    width: 100%;
+    margin-top: 20px;
+  }
+  iframe {
+    width: 100%;
+    height: 300px;
+  }
+}
